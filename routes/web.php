@@ -24,4 +24,20 @@ Route::get('/data-table', function () {
 Route::get('/home', 'AuthController@home');
 Route::get('/data_table', 'AuthController@data-table');
 
+Route::get('/posts/create', 'PostController@create');
+Route::post('/posts', 'PostController@store');
+Route::get('/posts', 'PostController@index');
+Route::get('/posts/{id}', 'PostController@show');
+Route::get('/posts/{id}/edit', 'PostController@edit');
+Route::put('/posts/{id}', 'PostController@update');
+Route::delete('/posts/{id}', 'PostController@destroy');
+
+Route::get('/pertanyaan/create', 'crudcontroller@create');
+Route::post('/pertanyaan', 'crudcontroller@store');
+Route::get('/pertanyaan', 'crudcontroller@index');
+Route::get('/pertanyaan/{id}', 'crudcontroller@show');
+Route::get('/pertanyaan/{id}/edit', 'crudcontroller@edit');
+Route::put('/pertanyaan/{id}', 'crudcontroller@update');
+Route::delete('/pertanyaan/{id}', 'crudcontroller@destroy');
+
 
